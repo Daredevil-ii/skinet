@@ -1,6 +1,8 @@
-using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Hosting;
+using Core.Interfaces;
+using Infrastructue.Data;
+using Infrastructure.Data;
+
 namespace API
 {
 public class Startup {
@@ -9,6 +11,7 @@ public class Startup {
         _config = config;
     }
     public void ConfigureServices(IServiceCollection services) {
+        services.AddScoped<IProductRepository, ProductRepository>();
         services.AddControllers();
         services.AddDbContext<StoreContext>(x => x.UseSqlite(_config.GetConnectionString("DefaultConnection")));
     }
