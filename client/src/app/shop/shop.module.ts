@@ -4,6 +4,8 @@ import { ShopComponent } from './shop.component';
 import { ProductItemComponent } from './product-item/product-item.component';
 import { SharedModule } from '../shared/shared.module';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { ProductDetailsComponent } from './product-details/product-details.component';
+import { ShopRoutingModule } from './shop-routing.module';
 
 
 
@@ -11,12 +13,13 @@ import { NgxPaginationModule } from 'ngx-pagination';
   declarations: [
     ShopComponent,
     ProductItemComponent,
+    ProductDetailsComponent,
   ],
   imports: [
     CommonModule,
     SharedModule,
-    NgxPaginationModule
-  ],
-  exports: [ShopComponent]
+    NgxPaginationModule,
+    ShopRoutingModule
+  ]
 })
 export class ShopModule { }
