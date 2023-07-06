@@ -5,6 +5,7 @@
 /tmp
 /out-tsc
 /bazel-out
+*.rdb
 
 # Node
 /node_modules

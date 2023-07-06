@@ -6,6 +6,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { RouterModule } from '@angular/router';
 import { ShopRoutingModule } from './shop-routing.module';
 import { SharedModule } from '../shared/shared.module';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   declarations: [
@@ -15,8 +16,9 @@ import { SharedModule } from '../shared/shared.module';
   ],
   imports: [
     CommonModule,
-    // SharedModule,
-    ShopRoutingModule
+    SharedModule,
+    ShopRoutingModule,
+    NgxSpinnerModule
   ]
 })
 export class ShopModule { }

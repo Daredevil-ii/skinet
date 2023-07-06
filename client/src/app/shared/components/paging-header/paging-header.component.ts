@@ -6,13 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./paging-header.component.scss']
 })
 export class PagingHeaderComponent {
-  @Input() pageNumber: number = 1;
-  @Input() pageSize: number = 6;
-  @Input() totalCount: number = 0;
-
-  constructor() { }
-
-  ngOnInit() {
-
-  }
+  @Input() pageNumber?: number;
+  @Input() pageSize?: number;
+  @Input() totalCount?: number;
 }
