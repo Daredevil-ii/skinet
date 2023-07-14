@@ -2,6 +2,7 @@
 id= "show_pagination"
 (boundryLinks)="true"
 (totalCount)="totalCount"
+[ngModel]="pageNumber"
 (pageChange)="onPagerChanged($event)"
 (pageSize)="pageSize"
 previousText="&lsaquo;"
@@ -9,3 +10,17 @@ nextText="&rsaquo;"
 firstText="&laquo;"
 lastText="&raquo;">
 </pagination-controls>
+
+<!-- <pagination *ngIf="totalCount && pageSize"
+(boundaryLinks)="true"
+(totalItems)="totalCount"
+
+(itemsPerPage)="pageSize"
+(maxSize)="10"
+[ngModel]="pageNumber"
+(pageChanged)="onPagerChanged($event)"
+previousText="&lsaquo;"
+nextText="&rsaquo;"
+firstText="&laquo;"
+lastText="&raquo;">
+</pagination> -->
